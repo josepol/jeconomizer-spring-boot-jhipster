@@ -42,6 +42,10 @@ public class CacheConfiguration {
             cm.createCache(com.polsastre.jeconomizer.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.polsastre.jeconomizer.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.polsastre.jeconomizer.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(com.polsastre.jeconomizer.domain.Movement.class.getName(), jcacheConfiguration);
+            cm.createCache(com.polsastre.jeconomizer.domain.Category.class.getName(), jcacheConfiguration);
+            cm.createCache(com.polsastre.jeconomizer.domain.Percentage.class.getName(), jcacheConfiguration);
+            cm.createCache(com.polsastre.jeconomizer.domain.Amount.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

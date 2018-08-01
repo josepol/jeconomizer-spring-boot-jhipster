@@ -1,0 +1,26 @@
+{
+    "jeconomizerApp": {
+        "percentage" : {
+            "home": {
+                "title": "Percentages",
+                "createLabel": "Create a new Percentage",
+                "createOrEditLabel": "Create or edit a Percentage",
+                "search": "Search for Percentage"
+            },
+            "created": "A new Percentage is created with identifier {{ param }}",
+            "updated": "A Percentage is updated with identifier {{ param }}",
+            "deleted": "A Percentage is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Percentage {{ id }}?"
+            },
+            "detail": {
+                "title": "Percentage"
+            },
+            "dayPercentage": "Day Percentage",
+            "weekPercentage": "Week Percentage",
+            "monthPercentage": "Month Percentage",
+            "yearPercentage": "Year Percentage",
+            "categoryId": "Category Id"
+        }
+    }
+}

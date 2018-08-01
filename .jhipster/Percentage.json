@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "categoryId",
+            "otherEntityName": "category",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "percentage"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dayPercentage",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "weekPercentage",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "monthPercentage",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "yearPercentage",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20180801154054",
+    "entityTableName": "percentage",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,66 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "userId",
+            "otherEntityName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "dayIncome",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dayExpenses",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dayBalance",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "weekIncome",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "weekExpenses",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "weekBalance",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "monthIncome",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "monthExpenses",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "monthBalance",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "yearIncome",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "yearExpenses",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "yearBalance",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20180801154055",
+    "entityTableName": "amount",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,92 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myAmountLabel" jhiTranslate="jeconomizerApp.amount.home.createOrEditLabel">Create or edit a Amount</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!amount.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="amount.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.dayIncome" for="field_dayIncome">Day Income</label>
+            <input type="number" class="form-control" name="dayIncome" id="field_dayIncome"
+                [(ngModel)]="amount.dayIncome"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.dayExpenses" for="field_dayExpenses">Day Expenses</label>
+            <input type="number" class="form-control" name="dayExpenses" id="field_dayExpenses"
+                [(ngModel)]="amount.dayExpenses"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.dayBalance" for="field_dayBalance">Day Balance</label>
+            <input type="number" class="form-control" name="dayBalance" id="field_dayBalance"
+                [(ngModel)]="amount.dayBalance"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.weekIncome" for="field_weekIncome">Week Income</label>
+            <input type="number" class="form-control" name="weekIncome" id="field_weekIncome"
+                [(ngModel)]="amount.weekIncome"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.weekExpenses" for="field_weekExpenses">Week Expenses</label>
+            <input type="number" class="form-control" name="weekExpenses" id="field_weekExpenses"
+                [(ngModel)]="amount.weekExpenses"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.weekBalance" for="field_weekBalance">Week Balance</label>
+            <input type="number" class="form-control" name="weekBalance" id="field_weekBalance"
+                [(ngModel)]="amount.weekBalance"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.monthIncome" for="field_monthIncome">Month Income</label>
+            <input type="number" class="form-control" name="monthIncome" id="field_monthIncome"
+                [(ngModel)]="amount.monthIncome"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.monthExpenses" for="field_monthExpenses">Month Expenses</label>
+            <input type="number" class="form-control" name="monthExpenses" id="field_monthExpenses"
+                [(ngModel)]="amount.monthExpenses"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.monthBalance" for="field_monthBalance">Month Balance</label>
+            <input type="number" class="form-control" name="monthBalance" id="field_monthBalance"
+                [(ngModel)]="amount.monthBalance"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.yearIncome" for="field_yearIncome">Year Income</label>
+            <input type="number" class="form-control" name="yearIncome" id="field_yearIncome"
+                [(ngModel)]="amount.yearIncome"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.yearExpenses" for="field_yearExpenses">Year Expenses</label>
+            <input type="number" class="form-control" name="yearExpenses" id="field_yearExpenses"
+                [(ngModel)]="amount.yearExpenses"  />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.yearBalance" for="field_yearBalance">Year Balance</label>
+            <input type="number" class="form-control" name="yearBalance" id="field_yearBalance"
+                [(ngModel)]="amount.yearBalance"  />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jeconomizerApp.amount.userId" for="field_userId">User Id</label>
+            <select class="form-control" id="field_userId" name="userId" [(ngModel)]="amount.userId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="userOption.id === amount.userId?.id ? amount.userId : userOption" *ngFor="let userOption of users; trackBy: trackUserById">{{userOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

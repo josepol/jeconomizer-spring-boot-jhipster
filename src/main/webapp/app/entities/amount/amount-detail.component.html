@@ -1,0 +1,73 @@
+
+<div *ngIf="amount">
+    <h2><span jhiTranslate="jeconomizerApp.amount.detail.title">Amount</span> {{amount.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jeconomizerApp.amount.dayIncome">Day Income</span></dt>
+        <dd>
+            <span>{{amount.dayIncome}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.dayExpenses">Day Expenses</span></dt>
+        <dd>
+            <span>{{amount.dayExpenses}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.dayBalance">Day Balance</span></dt>
+        <dd>
+            <span>{{amount.dayBalance}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.weekIncome">Week Income</span></dt>
+        <dd>
+            <span>{{amount.weekIncome}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.weekExpenses">Week Expenses</span></dt>
+        <dd>
+            <span>{{amount.weekExpenses}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.weekBalance">Week Balance</span></dt>
+        <dd>
+            <span>{{amount.weekBalance}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.monthIncome">Month Income</span></dt>
+        <dd>
+            <span>{{amount.monthIncome}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.monthExpenses">Month Expenses</span></dt>
+        <dd>
+            <span>{{amount.monthExpenses}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.monthBalance">Month Balance</span></dt>
+        <dd>
+            <span>{{amount.monthBalance}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.yearIncome">Year Income</span></dt>
+        <dd>
+            <span>{{amount.yearIncome}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.yearExpenses">Year Expenses</span></dt>
+        <dd>
+            <span>{{amount.yearExpenses}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.yearBalance">Year Balance</span></dt>
+        <dd>
+            <span>{{amount.yearBalance}}</span>
+        </dd>
+        <dt><span jhiTranslate="jeconomizerApp.amount.userId">User Id</span></dt>
+        <dd>
+            {{amount.userId?.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'amount/'+ amount.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

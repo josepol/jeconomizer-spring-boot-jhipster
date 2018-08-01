@@ -1,0 +1,34 @@
+{
+    "jeconomizerApp": {
+        "amount" : {
+            "home": {
+                "title": "Amounts",
+                "createLabel": "Create a new Amount",
+                "createOrEditLabel": "Create or edit a Amount",
+                "search": "Search for Amount"
+            },
+            "created": "A new Amount is created with identifier {{ param }}",
+            "updated": "A Amount is updated with identifier {{ param }}",
+            "deleted": "A Amount is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Amount {{ id }}?"
+            },
+            "detail": {
+                "title": "Amount"
+            },
+            "dayIncome": "Day Income",
+            "dayExpenses": "Day Expenses",
+            "dayBalance": "Day Balance",
+            "weekIncome": "Week Income",
+            "weekExpenses": "Week Expenses",
+            "weekBalance": "Week Balance",
+            "monthIncome": "Month Income",
+            "monthExpenses": "Month Expenses",
+            "monthBalance": "Month Balance",
+            "yearIncome": "Year Income",
+            "yearExpenses": "Year Expenses",
+            "yearBalance": "Year Balance",
+            "userId": "User Id"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+entity Movement {
+	startDate Instant required
+    amount Long required
+    picture AnyBlob
+    balance Long
+}
+
+entity Category {
+	name String required maxlength(100)
+    order Integer required
+}
+
+entity Percentage {
+	dayPercentage Double
+    weekPercentage Double
+    monthPercentage Double
+    yearPercentage Double
+}
+
+entity Amount {
+	dayIncome Long
+    dayExpenses Long
+    dayBalance Long
+    weekIncome Long
+    weekExpenses Long
+    weekBalance Long
+    monthIncome Long
+    monthExpenses Long
+    monthBalance Long
+    yearIncome Long
+    yearExpenses Long
+    yearBalance Long
+}
+
+relationship ManyToOne {
+	Movement{categoryId} to Category
+    Movement{userId} to User
+    Category{userId} to User
+    Amount{userId} to User
+}
+
+relationship OneToOne {
+	Percentage{categoryId} to Category
+}
+
+service all with serviceImpl
